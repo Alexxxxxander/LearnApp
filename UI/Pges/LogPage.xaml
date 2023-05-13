@@ -1,0 +1,40 @@
+﻿<Page x:Class="LearnApp.UI.Pges.LogPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LearnApp.UI.Pges"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LogPage">
+
+    <Grid>
+        <Border Height="300"
+                Width="300"
+                Grid.Row="1"
+                BorderThickness="1"
+                BorderBrush="Black"
+                CornerRadius="20"
+                Background="{StaticResource AdditionalColor}">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Введите код для входа в режим администратора"
+                       FontSize="18"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"
+                       Margin="20"/>
+                <TextBox x:Name="TxtBoxPassword" 
+                         Style="{DynamicResource TextNewBoxStyle}"
+                         TabIndex="0"/>
+                <Button x:Name="BtnAccept" Content="Подтвердить"
+                        Template="{DynamicResource BaseButtonTemplate}" 
+                        Style="{StaticResource BaseButton}"
+                        TabIndex="1" Click="BtnAccept_Click"/>
+                <Button x:Name="BtnSkip" Content="Пропустить"
+                        Template="{DynamicResource BaseButtonTemplate}" 
+                        Style="{StaticResource BaseButton}"
+                        TabIndex="2" Click="BtnSkip_Click"
+                        />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
